@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="337d829b-d4eb-41b5-aa6c-3b7ff5c0e0ff" name="Changes" comment="Case study module 2: thêm thông tin nhân viên và khách hàng">
-      <change afterPath="$PROJECT_DIR$/src/storage/GenerateData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/customer/DataFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/customer/ReadAndWriteCustomer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/employees/DataFileEmployees.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/employees/ReadAndWriteEmployees.java" afterDir="false" />
+    <list default="true" id="337d829b-d4eb-41b5-aa6c-3b7ff5c0e0ff" name="Changes" comment="Update read and write file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/CustomerManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CustomerManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/EmployeeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/EmployeeManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/BookingOnline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BookingOnline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Employees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Employees.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/PayForRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PayForRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/PayWage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PayWage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/ReadAndWrite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/ReadAndWriteEmployees.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +80,7 @@
       <workItem from="1662611264735" duration="11372000" />
       <workItem from="1662688555473" duration="6138000" />
       <workItem from="1662890603980" duration="2129000" />
-      <workItem from="1662944112074" duration="8981000" />
+      <workItem from="1662944112074" duration="16809000" />
     </task>
     <task id="LOCAL-00001" summary="Case study module 2: thêm thông tin nhân viên và khách hàng">
       <created>1662625250634</created>
@@ -101,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662625250635</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update read and write file">
+      <created>1662954093046</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1662954093046</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +115,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Case study module 2: thêm thông tin nhân viên và khách hàng" />
-    <option name="LAST_COMMIT_MESSAGE" value="Case study module 2: thêm thông tin nhân viên và khách hàng" />
+    <MESSAGE value="Update read and write file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update read and write file" />
   </component>
 </project>

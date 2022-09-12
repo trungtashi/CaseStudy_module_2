@@ -32,35 +32,16 @@ public class Main {
                     System.out.println("2: Display customer!");
                     System.out.println("3: Delete information customer!");
                     System.out.println("4: Charge guest room!");
-                    System.out.println("5: To exit!");
+                    System.out.println("5: Find customer by id card!");
+                    System.out.println("0: To exit!");
                     String inputCustomer = sc.nextLine();
                     switch (inputCustomer) {
                         case "1":
 
-                            System.out.println("Enter numbers of days: ");
-                            int numberOfDay = sc.nextInt();
-                            System.out.println("Enter type room: ");
-                            sc.nextLine();
-                            String typeRoom = sc.nextLine();
-
-                            System.out.println("Enter price room: ");
-                            double cost = sc.nextDouble();
-
-                            System.out.println("Enter name customer: ");
-                            sc.nextLine();
-                            String name = sc.nextLine();
-
-                            System.out.println("Enter age: ");
-                            int age = sc.nextInt();
-                            sc.nextLine();
-                            System.out.println("Enter identityCard");
-                            String id = sc.nextLine();
-                            Customer customer = new Customer(numberOfDay, typeRoom,cost,id,name,age);
-
-                            customerManage.addInformation(customer);
+                            addCustomer(customerManage, sc);
                             break;
                         case "2":
-                            for (Customer list : customerList
+                            for (Customer list : customers
                             ) {
                                 System.out.println(list.toString());
                             }
@@ -70,6 +51,9 @@ public class Main {
                             break;
                         case "4":
                             System.out.println("Bill: " + customerManage.payForRoom());
+                            break;
+                        case "5":
+                            customerManage.searchCustomerById();
                             break;
                         default:
                             System.out.println("Invalid");
@@ -84,23 +68,11 @@ public class Main {
                     System.out.println("2: Display employees!");
                     System.out.println("3: Delete information employees!");
                     System.out.println("4: Calculate employee salary!");
-                    System.out.println("5: To exit!");
+                    System.out.println("0: To exit!");
                     String inputEmployees = sc.nextLine();
                     switch (inputEmployees) {
                         case "1":
-                            System.out.println("Enter idCard: ");
-                            String id = sc.nextLine();
-                            System.out.println("Enter Number of working days: ");
-                            int numOfWorkingDays = sc.nextInt();
-
-                            System.out.println("Enter name employee: ");
-                            sc.nextLine();
-                            String name = sc.nextLine();
-
-                            System.out.println("Enter wage of employee: ");
-                            double wage = sc.nextDouble();
-                            Employees employee = new Employees(id,numOfWorkingDays,name,wage);
-                            employeeManager.addEmployees(employee);
+                            addEmployees(employeeManager, sc);
                             break;
                         case "2":
                             for (Employees list : employees
@@ -114,7 +86,8 @@ public class Main {
                         case "4":
                             System.out.println("Total: " + employeeManager.payWage());
                             break;
-
+                        case "0":
+                            System.exit(0);
                         default:
                             System.out.println("Invalid");
                             break;
@@ -122,5 +95,45 @@ public class Main {
                 }
             }
         }
+    }
+
+    private static void addEmployees(EmployeeManager employeeManager, Scanner sc) {
+        System.out.println("Enter idCard: ");
+        String id = sc.nextLine();
+        System.out.println("Enter Number of working days: ");
+        int numOfWorkingDays = sc.nextInt();
+
+        System.out.println("Enter name employee: ");
+        sc.nextLine();
+        String name = sc.nextLine();
+
+        System.out.println("Enter wage of employee: ");
+        double wage = sc.nextDouble();
+        Employees employee = new Employees(id,numOfWorkingDays,name,wage);
+        employeeManager.addEmployees(employee);
+    }
+
+    private static void addCustomer(CustomerManagement customerManage, Scanner sc) {
+        System.out.println("Enter numbers of days: ");
+        int numberOfDay = sc.nextInt();
+        System.out.println("Enter type room: ");
+        sc.nextLine();
+        String typeRoom = sc.nextLine();
+
+        System.out.println("Enter price room: ");
+        double cost = sc.nextDouble();
+
+        System.out.println("Enter name customer: ");
+        sc.nextLine();
+        String name = sc.nextLine();
+
+        System.out.println("Enter age: ");
+        int age = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Enter identityCard");
+        String id = sc.nextLine();
+        Customer customer = new Customer(numberOfDay, typeRoom,cost,id,name,age);
+
+        customerManage.addInformation(customer);
     }
 }

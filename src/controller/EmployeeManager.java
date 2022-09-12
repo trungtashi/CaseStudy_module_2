@@ -9,14 +9,14 @@ import java.util.Scanner;
 
 public class EmployeeManager {
     public static List<Employees> employeeManagers;
-    private static DataFileEmployees readWriteFile = ReadAndWriteEmployees.getInstance();
+    private static DataFileEmployees readWriteFileEmployees = ReadAndWriteEmployees.getInstance();
     static {
-        employeeManagers = readWriteFile.readFile();
+        employeeManagers = readWriteFileEmployees.readFile();
     }
 
     public void addEmployees(Employees employees){
         employeeManagers.add(employees);
-        readWriteFile.writeFile(employeeManagers);
+        readWriteFileEmployees.writeFile(employeeManagers);
     }
     public  void deleteEmployees(List<Employees> employees){
         Scanner sc = new Scanner(System.in);
@@ -24,9 +24,9 @@ public class EmployeeManager {
         String id = sc.nextLine();
         for (int i = 0; i < employees.size(); i++) {
             if (employees.get(i) instanceof Employees) {
-                if (employees.get(i).getId().equals(id))
-                    employees.remove(employees.get(i));
-//                ReadAndWriteEmployees.writeFile(employees);
+                if (employeeManagers.get(i).getId().equals(id))
+                    employeeManagers.remove(employeeManagers.get(i));
+                readWriteFileEmployees.writeFile(employees);
             } else {
                 System.out.println("Not Found Id:");
             }
