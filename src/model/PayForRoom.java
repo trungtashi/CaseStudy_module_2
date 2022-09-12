@@ -1,5 +1,7 @@
 package model;
 
-public interface PayForRoom {
+import java.io.Serializable;
+
+public interface PayForRoom extends Serializable {
     double payForRoom();
 }

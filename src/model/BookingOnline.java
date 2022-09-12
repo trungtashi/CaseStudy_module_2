@@ -1,6 +1,8 @@
 package model;
 
-public class BookingOnline extends Hotel {
+import java.io.Serializable;
+
+public class BookingOnline extends Hotel implements Serializable {
     private String discount;
 
     public BookingOnline(String discount) {

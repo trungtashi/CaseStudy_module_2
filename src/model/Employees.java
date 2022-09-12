@@ -4,14 +4,14 @@ import java.io.Serializable;
 
 public class Employees extends Hotel implements PayWage, Serializable {
     private String id;
-    private int numberOfWorkingDays;
+    private double numberOfWorkingDays;
     private String name;
     private double wage;
 
     public Employees() {
     }
 
-    public Employees(String id, int numberOfWorkingDays, String name, double wage) {
+    public Employees(String id, double numberOfWorkingDays, String name, double wage) {
         this.id = id;
         this.numberOfWorkingDays = numberOfWorkingDays;
         this.name = name;
@@ -26,11 +26,11 @@ public class Employees extends Hotel implements PayWage, Serializable {
         this.id = id;
     }
 
-    public int getNumberOfWorkingDays() {
+    public double getNumberOfWorkingDays() {
         return numberOfWorkingDays;
     }
 
-    public void setNumberOfWorkingDays(int numberOfWorkingDays) {
+    public void setNumberOfWorkingDays(double numberOfWorkingDays) {
         this.numberOfWorkingDays = numberOfWorkingDays;
     }
 
@@ -59,7 +59,6 @@ public class Employees extends Hotel implements PayWage, Serializable {
                 ", wage=" + wage +
                 '}';
     }
-
     @Override
     public double payWage() {
         double total = getNumberOfWorkingDays()*getWage();
